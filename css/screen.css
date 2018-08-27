@@ -1,0 +1,146 @@
+/* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+
+@font-face { font-family: "PT_Sans"; font-weight: 400; font-style: normal; src: url("../fonts/PT_Sans/PT_Sans-Web-Regular.otf?#iefix") format("opentype"), url("../fonts/PT_Sans/PT_Sans-Web-Regular.woff") format("woff"), url("../fonts/PT_Sans/PT_Sans-Web-Regular.ttf") format("truetype"); }
+@font-face { font-family: "PT_Sans"; font-weight: 600; font-style: normal; src: url("../fonts/PT_Sans/PT_Sans-Web-Bold.otf?#iefix") format("opentype"), url("../fonts/PT_Sans/PT_Sans-Web-Bold.woff") format("woff"), url("../fonts/PT_Sans/PT_Sans-Web-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Roboto"; font-weight: 500; font-style: normal; src: url("../fonts/Roboto/Roboto-Medium.otf?#iefix") format("opentype"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Roboto_Slab"; font-weight: 700; font-style: normal; src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.otf?#iefix") format("opentype"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Roboto_Slab"; font-weight: 400; font-style: normal; src: url("../fonts/Roboto_Slab/RobotoSlab-Regular.otf?#iefix") format("opentype"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype"); }
+@font-face { font-family: "UniSansThinCAPS"; font-weight: 400; font-style: normal; src: url("../fonts/UniSansThinCAPS/UniSansThinCAPS.otf?#iefix") format("opentype"), url("../fonts/UniSansThinCAPS/UniSansThinCAPS.woff") format("woff"), url("../fonts/UniSansThinCAPS/UniSansThinCAPS.ttf") format("truetype"); }
+.container { max-width: 1170px; margin: 0 auto; padding: 0 10px; }
+
+.authorization { background-color: #e7eced; height: 32px; }
+
+.menu { text-align: right; }
+
+.menu__icon { display: none; width: 30px; height: 24px; position: relative; cursor: pointer; }
+
+.menu__icon span { display: block; position: absolute; height: 3px; width: 100%; background: #ffffff; border-radius: 0; opacity: 1; left: 0; transform: rotate(0deg); transition: .25s ease-in-out; }
+
+.menu__icon span:nth-child(1) { top: 3px; }
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) { top: 10px; }
+
+.menu__icon span:nth-child(4) { top: 17px; }
+
+.menu__links-item { font-size: 14px; text-decoration: none; padding-bottom: 10px; transition: 0.3s linear; font-family: "Roboto"; font-weight: 400; color: #000000; }
+
+.menu.menu_state_open .menu__icon span:nth-child(1) { top: 18px; width: 0%; left: 50%; }
+
+.menu.menu_state_open .menu__icon span:nth-child(2) { transform: rotate(45deg); }
+
+.menu.menu_state_open .menu__icon span:nth-child(3) { transform: rotate(-45deg); }
+
+.menu.menu_state_open .menu__icon span:nth-child(4) { top: 18px; width: 0%; left: 50%; }
+
+.menu.menu_state_open .menu__links { display: block; }
+
+@media screen and (max-width: 999px) { .menu__icon { display: inline-block; }
+  .menu__links { position: fixed; display: none; top: 0; right: 0; left: 0; margin-top: 64px; background-color: white; z-index: 1000; }
+  .menu__links-item { display: block; padding: 10px 0; text-align: center; color: #000000; } }
+.menu { display: flex; flex-direction: row; align-items: flex-start; justify-content: flex-start; flex-basis: 13%; max-width: 13%; padding: 0; transition: 0.3s linear; padding-left: 0; }
+@media (min-width: 480px) { .menu { flex-basis: 85%; max-width: 85%; padding: 0; flex-direction: row; } }
+@media (min-width: 768px) { .menu { flex-basis: 80%; max-width: 80%; } }
+@media (min-width: 992px) { .menu { flex-basis: 70%; max-width: 70%; justify-content: space-between; } }
+.menu ul { display: flex; justify-content: flex-end; margin-right: 28px; }
+.menu ul li { margin-right: 20px; }
+.menu ul li:nth-of-type(1) img { max-height: 30px; }
+.menu ul li:nth-of-type(2) img { max-height: 21px; }
+.menu__links { display: flex; flex-direction: row; justify-content: space-between; width: 100%; }
+.menu__links-item { font-size: 18px; text-decoration: none; padding-bottom: 10px; transition: 0.3s linear; font-family: "PT_Sans"; font-weight: 400; color: #000000; text-align: left; display: flex; align-items: center; }
+.menu__links-item span { margin: 0 10px; width: 26px; }
+.menu__links-item span img { width: 100%; }
+@media (min-width: 768px) { .menu__links-item { font-size: 18px; } }
+@media (min-width: 992px) { .menu__links-item { color: #282828; } }
+.menu__links-item:hover { background-color: none; }
+
+.btn { display: flex; justify-content: center; }
+.btn a { text-decoration: none; text-transform: uppercase; height: 42px; width: 223px; display: flex; justify-content: center; align-items: center; font-family: "PT_Sans"; font-weight: 400; color: #ffffff; background-color: #ff9900; box-shadow: 0px 3px 13px #acacab; transition: 0.3s ease; font-size: 18px; border-radius: 3px; }
+.btn a:hover { box-shadow: none; }
+
+.top-section { height: 96px; background-color: #ffffff; }
+.top-section header { display: flex; align-items: center; height: 96px; margin-bottom: 18px; }
+.top-section header .logo { flex-basis: 15%; max-width: 15%; }
+@media (min-width: 768px) { .top-section header { align-items: flex-start; } }
+@media (min-width: 992px) { .top-section header { align-items: center; justify-content: center; } }
+.top-section header .search { flex-basis: 80%; max-width: 80%; }
+.top-section header .search input { height: 18px; border: none; padding: 8px 15px; width: 196px; border-radius: 3px; }
+
+.banner { margin-bottom: 80px; background: url("../img/banner-img.png") no-repeat center top; padding-top: 170px; padding-bottom: 250px; background-size: cover; }
+.banner .title { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #ffffff; font-family: "PT_Sans"; }
+.banner .title h1 { font-size: 80px; font-weight: 600; margin-bottom: 40px; }
+.banner .title p { font-size: 30px; font-weight: 400; }
+
+.service { font-family: "PT_Sans"; padding-bottom: 70px; }
+.service .container { display: flex; flex-direction: column; align-items: center; }
+.service .container .img { margin-bottom: 14px; height: 64px; }
+.service .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
+.service .container .desc { max-width: 561px; margin-bottom: 42px; }
+.service .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
+.service .container .service-item { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.service .container .service-item .item { flex-basis: 20%; max-width: 20%; display: flex; flex-direction: column; align-items: center; padding: 0 25px; }
+.service .container .service-item .item .title, .service .container .service-item .item .desc { font-size: 16px; }
+
+.how-it-works { font-family: "PT_Sans"; }
+.how-it-works .container { display: flex; flex-direction: column; align-items: center; }
+.how-it-works .container .title { font-weight: 600; font-size: 38px; margin-bottom: 60px; }
+.how-it-works .container .slide { max-width: 760px; }
+.how-it-works .container .slide .slick-slide img { margin: 0 auto; }
+.how-it-works .container .slide .slick-prev, .how-it-works .container .slide .slick-next { width: 20px; height: 34px; }
+.how-it-works .container .slide .slick-prev { left: -50px; background: url("../img/arrow-prev.png") no-repeat center top; }
+.how-it-works .container .slide .slick-prev:before { content: ' '; }
+.how-it-works .container .slide .slick-next { right: -50px; background: url("../img/arrow-next.png") no-repeat center top; }
+.how-it-works .container .slide .slick-next:before { content: ' '; }
+
+.our-team { font-family: "PT_Sans"; background: url("../img/whirlpool.png") repeat center top; padding: 90px 0; }
+.our-team .container { display: flex; flex-direction: column; align-items: center; }
+.our-team .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
+.our-team .container .desc { max-width: 561px; margin-bottom: 42px; }
+.our-team .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
+.our-team .container .service-item { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.our-team .container .service-item .item { flex-basis: 20%; max-width: 20%; display: flex; flex-direction: column; align-items: center; padding: 0 25px; }
+.our-team .container .service-item .item .img { margin-bottom: 28px; }
+.our-team .container .service-item .item .title { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
+.our-team .container .service-item .item .desc { font-size: 16px; }
+
+.why-we { font-family: "PT_Sans"; padding: 90px 0; }
+.why-we .container { display: flex; flex-direction: column; align-items: center; }
+.why-we .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
+.why-we .container .desc { max-width: 561px; margin-bottom: 42px; }
+.why-we .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
+
+.partners { font-family: "PT_Sans"; padding-top: 40px; padding-bottom: 90px; }
+.partners .container { display: flex; flex-direction: column; align-items: center; }
+.partners .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
+.partners .container .partners-icon { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
+.partners .container .partners-icon .img { flex-basis: 10%; max-width: 10%; max-height: 60px; height: 100%; }
+.partners .container .partners-icon .img img { width: 100%; height: 100%; }
+
+.get-interesting { font-family: "PT_Sans"; background-color: #e8e8e8; padding-top: 90px; padding-bottom: 100px; }
+.get-interesting .container { display: flex; flex-direction: column; align-items: center; }
+.get-interesting .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
+.get-interesting .container .desc { max-width: 561px; margin-bottom: 68px; }
+.get-interesting .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
+.get-interesting .container .feedback { display: flex; flex-direction: column; align-items: center; }
+.get-interesting .container .feedback .inputs input { padding: 16px 20px; margin-bottom: 30px; border: none; width: 280px; }
+.get-interesting .container .feedback .btn { width: 180px; height: 54px; background-color: #10c9c3; color: #fff; border: none; font-size: 18px; letter-spacing: 3px; }
+.get-interesting .container .agree { text-align: center; font-size: 16px; color: #7d7d7d; margin-bottom: 24px; }
+.get-interesting .container .agree span { text-decoration: underline; }
+
+footer { font-family: "PT_Sans"; padding-top: 58px; padding-bottom: 54px; background-color: #414141; display: flex; flex-direction: column; align-items: center; }
+footer .greenval { font-weight: 400; font-size: 18px; color: #ffffff; }
