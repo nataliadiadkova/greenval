@@ -93,7 +93,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .service .container .desc { max-width: 561px; margin-bottom: 42px; }
 .service .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
 .service .container .service-item { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
-.service .container .service-item .item { flex-basis: 20%; max-width: 20%; display: flex; flex-direction: column; align-items: center; padding: 0 25px; }
+.service .container .service-item .item { flex-basis: 22%; max-width: 22%; display: flex; flex-direction: column; align-items: center; padding: 0 10px; }
 .service .container .service-item .item .title, .service .container .service-item .item .desc { font-size: 16px; }
 
 .how-it-works { font-family: "PT_Sans"; }
@@ -112,8 +112,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .our-team .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
 .our-team .container .desc { max-width: 561px; margin-bottom: 42px; }
 .our-team .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
-.our-team .container .service-item { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
-.our-team .container .service-item .item { flex-basis: 20%; max-width: 20%; display: flex; flex-direction: column; align-items: center; padding: 0 25px; }
+.our-team .container .service-item { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+.our-team .container .service-item .item { flex-basis: 27%; max-width: 27%; display: flex; flex-direction: column; align-items: center; padding: 0 25px; }
 .our-team .container .service-item .item .img { margin-bottom: 28px; }
 .our-team .container .service-item .item .title { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
 .our-team .container .service-item .item .desc { font-size: 16px; }
@@ -121,14 +121,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .why-we { font-family: "PT_Sans"; padding: 90px 0; }
 .why-we .container { display: flex; flex-direction: column; align-items: center; }
 .why-we .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
-.why-we .container .desc { max-width: 561px; margin-bottom: 42px; }
+.why-we .container .desc { max-width: 530px; margin-bottom: 42px; }
 .why-we .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
 
 .partners { font-family: "PT_Sans"; padding-top: 40px; padding-bottom: 90px; }
 .partners .container { display: flex; flex-direction: column; align-items: center; }
 .partners .container .title { font-weight: 600; font-size: 36px; margin-bottom: 26px; }
-.partners .container .partners-icon { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; }
-.partners .container .partners-icon .img { flex-basis: 10%; max-width: 10%; max-height: 60px; height: 100%; }
+.partners .container .partners-icon { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+.partners .container .partners-icon .img { flex-basis: 8%; max-width: 8%; max-height: 60px; height: 100%; }
 .partners .container .partners-icon .img img { width: 100%; height: 100%; }
 
 .get-interesting { font-family: "PT_Sans"; background-color: #e8e8e8; padding-top: 90px; padding-bottom: 100px; }
@@ -138,9 +138,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .get-interesting .container .desc p { text-align: center; font-size: 16px; font-weight: 400; }
 .get-interesting .container .feedback { display: flex; flex-direction: column; align-items: center; }
 .get-interesting .container .feedback .inputs input { padding: 16px 20px; margin-bottom: 30px; border: none; width: 280px; }
+.get-interesting .container .feedback .inputs input:nth-child(2) { margin-left: 30px; }
 .get-interesting .container .feedback .btn { width: 180px; height: 54px; background-color: #10c9c3; color: #fff; border: none; font-size: 18px; letter-spacing: 3px; }
 .get-interesting .container .agree { text-align: center; font-size: 16px; color: #7d7d7d; margin-bottom: 24px; }
 .get-interesting .container .agree span { text-decoration: underline; }
+.get-interesting .container .agree span a { color: #7d7d7d; }
 
 footer { font-family: "PT_Sans"; padding-top: 58px; padding-bottom: 54px; background-color: #414141; display: flex; flex-direction: column; align-items: center; }
 footer .greenval { font-weight: 400; font-size: 18px; color: #ffffff; }
